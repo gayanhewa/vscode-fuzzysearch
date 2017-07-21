@@ -5,14 +5,14 @@ import * as shelljs from 'shelljs';
 
 export function activate(context: vscode.ExtensionContext) {
 
-    let disposable = vscode.commands.registerCommand('extension.fuzzySearch', () => {
+    let disposable = vscode.commands.registerCommand('extension.fuzzySearch', async () => {
 
         if (vscode.workspace.rootPath === undefined) {
             vscode.window.showErrorMessage('Unable to use Fuzzy search extension without an active project open.');
             return;
         }
 
-        const filelist = getFileList(vscode.workspace.rootPath);
+        const filelist = await getFileList(vscode.workspace.rootPath);
 
         if (filelist.length < 1) {
             vscode.window.showInformationMessage("Empty workspace");
