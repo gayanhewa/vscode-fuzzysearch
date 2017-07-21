@@ -18,8 +18,9 @@ export function activate(context: vscode.ExtensionContext) {
             vscode.window.showInformationMessage("Empty workspace");
             return;
         }
-
+        console.log(filelist);
         vscode.window.showQuickPick(filelist).then((file_selection) => {
+            console.log(file_selection);
             if (file_selection !== undefined) {
                 const selectedFile = vscode.Uri.file(context.asAbsolutePath(file_selection));
                 vscode.workspace.openTextDocument(selectedFile).then((document) => {
