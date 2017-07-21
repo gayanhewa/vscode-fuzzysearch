@@ -2,7 +2,7 @@
   "name": "fuzzysearch",
   "displayName": "Fuzzy File Search",
   "description": "Fuzzy file search for the active workspace",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "gayanhewa",
   "engines": {
     "vscode": "^1.13.0"
