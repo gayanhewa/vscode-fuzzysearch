@@ -9,14 +9,21 @@ import * as assert from 'assert';
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
 import * as vscode from 'vscode';
-import * as myExtension from '../src/extension';
+import * as fuzzySearch from '../src/fuzzysearch';
+import * as shelljs from 'shelljs';
 
 // Defines a Mocha test suite to group tests of similar kind together
-suite("Extension Tests", () => {
+suite("Fuzzy Search Tests", () => {
 
     // Defines a Mocha unit test
-    test("Something 1", () => {
-        assert.equal(-1, [1, 2, 3].indexOf(5));
-        assert.equal(-1, [1, 2, 3].indexOf(0));
+    test("Test getFileList", () => {
+
+        const expected_files = ['file1.txt', 'file2.txt'];
+        shelljs.cd('/Users/gayan.hewa/Workspace/filelist/test');
+        const files = fuzzySearch.getFileList('stubs');
+
+        assert.equal(files[0], expected_files[0]);
+        assert.equal(files[1], expected_files[1]);
+
     });
 });
