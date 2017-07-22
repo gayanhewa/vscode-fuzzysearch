@@ -18,12 +18,19 @@ suite("Fuzzy Search Tests", () => {
     // Defines a Mocha unit test
     test("Test getFileList", () => {
 
-        const expected_files = ['file1.txt', 'file2.txt'];
-        shelljs.cd('/Users/gayan.hewa/Workspace/filelist/test');
-        const files = fuzzySearch.getFileList('stubs');
+        const expected_files = [
+            {
+                label: 'fuzzysearch.test.js'
+            },
+            {
+                label: 'fuzzysearch.test.js.map'
+            }
+        ];
 
-        assert.equal(files[0], expected_files[0]);
-        assert.equal(files[1], expected_files[1]);
+        const files = fuzzySearch.getFileList(__dirname);
+        console.log(files);
+        assert.equal(files[0].label, expected_files[0].label);
+        assert.equal(files[1].label, expected_files[1].label);
 
     });
 });
