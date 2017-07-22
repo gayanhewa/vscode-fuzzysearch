@@ -2,7 +2,11 @@
   "name": "fuzzysearch",
   "displayName": "Fuzzy File Search",
   "description": "Fuzzy file search for the active workspace",
-  "version": "0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gayanhewa/vscode-fuzzysearch"
+  },
+  "version": "0.0.4",
   "publisher": "gayanhewa",
   "engines": {
     "vscode": "^1.13.0"
@@ -11,7 +15,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.fuzzySearch"
+    "onCommand:extension.fuzzySearch",
+    "onCommand:extension.fuzzySearchFlush"
   ],
   "main": "./out/src/fuzzysearch",
   "contributes": {
@@ -19,6 +24,10 @@
       {
         "command": "extension.fuzzySearch",
         "title": "Fuzzy File Search"
+      },
+      {
+        "command": "extension.fuzzySearchFlush",
+        "title": "Fuzzy File Search Flush Cache"
       }
     ]
   },

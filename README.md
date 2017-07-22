@@ -5,6 +5,11 @@ Since VSCodes `CMD + P` tends to be quite slow sometimes. This extension can be 
 ## Features
 
 - Ability to fuzzy search trough the project files
+- Last 5 open files gets higher priority in the initial result set for quick opens.
+
+![Alt text](/assets/fuzzy-demo.gif?raw=true "Demo 1")
+
+![Alt text](/assets/fuzzy-demo-2.gif?raw=true "Demo 2")
 
 ## Requirements
 
@@ -12,10 +17,13 @@ Since VSCodes `CMD + P` tends to be quite slow sometimes. This extension can be 
 
 ## Known Issues
 
-Might not work on Windows Operating systems.
+- Might not work on Windows Operating systems.
+- The `QuickPicker` performs slow with larger projects (50,000++ files), since th Visual Studio API doesn't offer a dynamic update for the input selection as of today. We are still looking out for a suitable solution to make it work best.
 
 ## Release Notes
 
 This is a pre-release of the extension and the extension is still under development. Please expect failures.
+
+Please report issues or raise a PR for any contributions against https://github.com/gayanhewa/vscode-fuzzysearch
 
 **Enjoy!**
