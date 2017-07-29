@@ -8,6 +8,9 @@
     },
     "version": "0.2.0",
     "publisher": "gayanhewa",
+    "author": "Gayan Hewa <gayanhewa@gmail.com>",
+    "license": "MIT",
+    "icon": "assets/icon.png",
     "engines": {
         "vscode": "^1.13.0"
     },
