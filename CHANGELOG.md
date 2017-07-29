@@ -15,3 +15,7 @@ Fuzzy File Search Visual Studio Code Extension ChangeLog
 - Update the `QuickPick` results to display `Label`, `Description` and `Details`
 - Ability to search all three fields Label, Description and Details for a file entry
 - Disabled caching until a better caching mechanism is introduced.
+
+## [v0.2.1]
+
+- Updating the Readme and adding the icons
